@@ -3,15 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
 
-package ejer5f;
+package parteb;
 
+import partea.*;
 import java.util.Objects;
 
 /**
  *
  * @author noelia
  */
-public class Soldado {
+public class Soldado implements Comparable<Soldado>{
 
     private String nif;
     private String nombre;
@@ -93,19 +94,12 @@ public class Soldado {
             return false;
         }
         final Soldado other = (Soldado) obj;
-        if (this.edad != other.edad) {
-            return false;
-        }
-        if (!Objects.equals(this.nif, other.nif)) {
-            return false;
-        }
-        if (!Objects.equals(this.nombre, other.nombre)) {
-            return false;
-        }
-        if (!Objects.equals(this.apellido1, other.apellido1)) {
-            return false;
-        }
-        return Objects.equals(this.apellido2, other.apellido2);
+        return Objects.equals(this.nif, other.nif);
+    }
+
+    @Override
+    public int compareTo(Soldado o) {
+        return this.nif.compareToIgnoreCase(o.nif);
     }
     
     
