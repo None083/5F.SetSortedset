@@ -4,11 +4,7 @@
  */
 package partea;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  *
@@ -33,10 +29,13 @@ public class Prueba {
         
         System.out.println(ejercito.estaEnEjercito(new Soldado("08764534P", "", "", "", 0)));
         
-        ArrayList<Soldado> listaSoldados = ejercito.listaSoldados();
-        for (int i = 0; i < listaSoldados.size(); i++) {
-            System.out.println(listaSoldados.get(i));
-        }
+//        ArrayList<Soldado> listaSoldados = ejercito.listaSoldados();
+//        for (int i = 0; i < listaSoldados.size(); i++) {
+//            System.out.println(listaSoldados.get(i));
+//        }
+        
+        ejercito.mostrarEjercito1();
+        ejercito.mostrarEjercito2();
                 
     }
     

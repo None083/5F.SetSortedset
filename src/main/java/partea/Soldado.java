@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author noelia
  */
-public class Soldado implements Comparable<Soldado>{
+public class Soldado{
 
     private String nif;
     private String nombre;
@@ -96,11 +96,4 @@ public class Soldado implements Comparable<Soldado>{
         return Objects.equals(this.nif, other.nif);
     }
 
-    @Override
-    public int compareTo(Soldado o) {
-        return this.nif.compareToIgnoreCase(o.nif);
-    }
-    
-    
-    
 }
